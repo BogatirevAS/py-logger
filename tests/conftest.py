@@ -1,4 +1,5 @@
 import logging
+import os
 import pytest
 from pathlib import Path
 
@@ -25,6 +26,13 @@ def reset_logger_manager():
     LoggerManager.settings = saved_settings
     if saved_cached is not None:
         LoggerManager._cached_names = saved_cached
+
+
+@pytest.fixture(autouse=True)
+def clear_log_env(monkeypatch):
+    for key in list(os.environ):
+        if key.startswith("LOG_"):
+            monkeypatch.delenv(key, raising=False)
 
 
 @pytest.fixture

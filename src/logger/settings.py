@@ -25,7 +25,7 @@ class LoggerSettingsKwargs(TypedDict, total=False):
 
 
 class LoggerSettings(BaseSettings, SettingsCreateOrUpdateMixin):
-    model_config = SettingsConfigDict(env_prefix="LOG_", extra="ignore")
+    model_config = SettingsConfigDict(env_prefix="LOG_", extra="ignore", env_ignore_empty=True)
 
     name_size: int = 30
     format_type: LoggerFormatType = LoggerFormatType.DEFAULT

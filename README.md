@@ -19,7 +19,7 @@ specific log entries to a separate file within a given context.
 pip install git+https://github.com/BogatirevAS/py-logger.git@master
 ```
 ```console
-pip install git+https://github.com/BogatirevAS/py-logger.git@0.1.0
+pip install git+https://github.com/BogatirevAS/py-logger.git@0.1.1
 ```
 
 - requirements.txt
@@ -27,26 +27,26 @@ pip install git+https://github.com/BogatirevAS/py-logger.git@0.1.0
 logger @ git+https://github.com/BogatirevAS/py-logger.git@master
 ```
 ```requirements
-logger @ git+https://github.com/BogatirevAS/py-logger.git@0.1.0
+logger @ git+https://github.com/BogatirevAS/py-logger.git@0.1.1
 ```
 
 ## Environment
 .env
-```properties
+```dotenv
 LOG_NAME_SIZE=30
-LOG_FORMAT_TYPE="default"
-LOG_DEFAULT_FORMAT="%(asctime)s %(levelname)s [%(name)s] - %(message)s"
-LOG_DEBUG_FORMAT="%(asctime)s %(levelname)s [%(name)s:%(lineno)d] %(funcName)s - %(message)s"
+LOG_FORMAT_TYPE=default
+LOG_DEFAULT_FORMAT=%(asctime)s %(levelname)s [%(name)s] - %(message)s
+LOG_DEBUG_FORMAT=%(asctime)s %(levelname)s [%(name)s:%(lineno)d] %(funcName)s - %(message)s
 LOG_DATEFMT=
-LOG_GLOBAL_FILENAME="global.log"
-LOG_GLOBAL_DIR="logs"
-LOG_SESSION_FILENAME="session.log"
-LOG_LEVEL="INFO"
-LOG_SESSION_LEVEL="INFO"
+LOG_GLOBAL_FILENAME=global.log
+LOG_GLOBAL_DIR=logs
+LOG_SESSION_FILENAME=session.log
+LOG_LEVEL=INFO
+LOG_SESSION_LEVEL=INFO
 LOG_MAX_BYTES=10485760
 LOG_BACKUP_COUNT=5
-LOG_ENABLE_FILE_HANDLERS="False"
-LOG_FORCE="True"
+LOG_ENABLE_FILE_HANDLERS=false
+LOG_FORCE=true
 ```
 
 ## Examples
